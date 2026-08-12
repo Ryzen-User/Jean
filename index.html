@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeanete Buenaventura | Operations & Accounts Payable Specialist</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ----- RESET & BASE ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      background: #f9fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- BUTTONS ----- */
+    .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s ease;
+      background: #2a4b7c;
+      color: #fff;
+      box-shadow: 0 6px 14px rgba(42, 75, 124, 0.25);
+    }
+
+    .btn:hover {
+      background: #1d3a5f;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(42, 75, 124, 0.30);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #2a4b7c;
+      border: 2px solid #2a4b7c;
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: #2a4b7c;
+      color: #fff;
+    }
+
+    .btn-sm {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+
+    /* ----- HEADER / NAV ----- */
+    header {
+      background: #ffffff;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding: 16px 0;
+    }
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0f2b4b;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #2a4b7c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      color: #334155;
+      transition: 0.2s;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #2a4b7c;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: #0f2b4b;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.6rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #0f2b4b;
+    }
+
+    /* ----- HERO ----- */
+    .hero {
+      padding: 80px 0 60px;
+      background: linear-gradient(145deg, #f0f4fb 0%, #ffffff 100%);
+      border-bottom: 1px solid rgba(42, 75, 124, 0.06);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      color: #0f2b4b;
+    }
+
+    .hero-content h1 span {
+      color: #2a4b7c;
+      position: relative;
+    }
+
+    .hero-content h1 span::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 4px;
+      width: 100%;
+      height: 10px;
+      background: rgba(42, 75, 124, 0.12);
+      z-index: -1;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: #475569;
+      margin: 20px 0 12px;
+      font-weight: 400;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: #334155;
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 28px;
+      margin-top: 20px;
+    }
+
+    .hero-badges span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      color: #1e293b;
+    }
+
+    .hero-badges i {
+      color: #2a4b7c;
+      font-size: 1.1rem;
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .avatar-placeholder {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #dce5f2 0%, #b8c9e0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 7rem;
+      color: #2a4b7c;
+      box-shadow: 0 20px 40px -12px rgba(42, 75, 124, 0.25);
+      border: 4px solid #ffffff;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    /* ----- SECTION TITLES ----- */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0f2b4b;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-sub {
+      color: #64748b;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      max-width: 640px;
+    }
+
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-alt {
+      background: #ffffff;
+    }
+
+    .section-gray {
+      background: #f8fafc;
+    }
+
+    /* ----- ABOUT ----- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: #334155;
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .stat-item {
+      background: #f1f5f9;
+      padding: 20px 16px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .stat-item .number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0f2b4b;
+    }
+
+    .stat-item .label {
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    /* ----- EXPERTISE / SERVICES ----- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      padding: 32px 24px;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      border: 1px solid #eef2f6;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px -8px rgba(42, 75, 124, 0.12);
+      border-color: #cbd5e1;
+    }
+
+    .service-card i {
+      font-size: 2.6rem;
+      color: #2a4b7c;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      color: #0f2b4b;
+    }
+
+    .service-card p {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    /* ----- SKILLS ----- */
+    .skills-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .skill-group h3 {
+      font-size: 1.2rem;
+      color: #0f2b4b;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-group h3 i {
+      color: #2a4b7c;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill-tag {
+      background: #eef2f6;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #1e293b;
+      transition: 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .skill-tag:hover {
+      background: #dce5f2;
+      border-color: #2a4b7c;
+    }
+
+    /* ----- EXPERIENCE / TIMELINE ----- */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .timeline-item {
+      background: #ffffff;
+      padding: 24px 30px;
+      border-radius: 20px;
+      border-left: 5px solid #2a4b7c;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef2f6;
+      border-left-width: 5px;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.2rem;
+      color: #0f2b4b;
+    }
+
+    .timeline-item .meta {
+      color: #64748b;
+      font-size: 0.95rem;
+      margin: 4px 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .timeline-item .meta i {
+      margin-right: 6px;
+      color: #2a4b7c;
+    }
+
+    .timeline-item p {
+      color: #334155;
+    }
+
+    /* ----- EDUCATION ----- */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .edu-card {
+      background: #ffffff;
+      padding: 24px 28px;
+      border-radius: 20px;
+      border: 1px solid #eef2f6;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .edu-card h3 {
+      color: #0f2b4b;
+      font-size: 1.2rem;
+    }
+
+    .edu-card .meta {
+      color: #64748b;
+      font-size: 0.95rem;
+      margin: 4px 0 6px;
+    }
+
+    .edu-card p {
+      color: #475569;
+    }
+
+    /* ----- CONTACT ----- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info h3 {
+      font-size: 1.4rem;
+      color: #0f2b4b;
+      margin-bottom: 16px;
+    }
+
+    .contact-info p {
+      color: #475569;
+      margin-bottom: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .contact-item i {
+      width: 44px;
+      height: 44px;
+      background: #eef2f6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2a4b7c;
+      font-size: 1.2rem;
+    }
+
+    .contact-item a {
+      color: #1e293b;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .contact-item a:hover {
+      color: #2a4b7c;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid #dce2ec;
+      border-radius: 12px;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      background: #ffffff;
+      transition: 0.2s;
+      font-family: inherit;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #2a4b7c;
+      box-shadow: 0 0 0 4px rgba(42, 75, 124, 0.08);
+    }
+
+    .contact-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    /* ----- FOOTER ----- */
+    footer {
+      background: #0f2b4b;
+      color: #cbd5e1;
+      padding: 40px 0 24px;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 18px;
+    }
+
+    .footer-socials a {
+      color: #cbd5e1;
+      font-size: 1.4rem;
+      transition: 0.2s;
+    }
+
+    .footer-socials a:hover {
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .footer-copy {
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 992px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .edu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content h1 {
+        font-size: 2.6rem;
+      }
+
+      .avatar-placeholder {
+        width: 240px;
+        height: 240px;
+        font-size: 5rem;
+      }
+
+      .skills-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0 10px;
+        gap: 16px;
+        background: #ffffff;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero {
+        padding: 50px 0 40px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-badges {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-grid {
+        gap: 30px;
+      }
+
+      .footer-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cta-group .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header>
+    <div class="container header-flex">
+      <div class="logo">J.<span>B.</span></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="hero-sub"><i class="fas fa-briefcase" style="color:#2a4b7c; margin-right:8px;"></i> Operations &amp; Accounts Payable Specialist</p>
+        <h1>Hi, I'm <span>Jeanete</span> (Jean) Buenaventura</h1>
+        <p class="hero-tagline">
+          Detail-oriented professional with a diverse background in finance operations, 
+          customer service, sales, and administrative support. Passionate about streamlining 
+          processes and delivering results.
+        </p>
+        <div class="hero-badges">
+          <span><i class="fas fa-check-circle"></i> 4+ years experience</span>
+          <span><i class="fas fa-clock"></i> Full-time availability</span>
+          <span><i class="fas fa-graduation-cap"></i> BS Industrial Engineering</span>
+        </div>
+        <div class="hero-cta-group">
+          <a href="#contact" class="btn">Let's work together <i class="fas fa-arrow-right" style="margin-left:10px;"></i></a>
+          <a href="#expertise" class="btn btn-outline">Explore expertise</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="avatar-placeholder">
+          <i class="fas fa-user-circle"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">About Me</h2>
+          <p>
+            I'm Jeanete (Jean) Buenaventura, an Operations Specialist with a strong 
+            foundation in accounts payable, expense auditing, and process optimization. 
+            I thrive at the intersection of finance, customer service, and sales — 
+            bringing a versatile skill set that helps businesses run smoothly.
+          </p>
+          <p>
+            With hands-on proficiency in MS Excel, NetSuite, and email management, 
+            I coordinate seamlessly with employees and vendors to ensure accuracy and 
+            efficiency. I believe in proactive problem-solving and clear communication 
+            to drive operational excellence.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <div class="number">4+</div>
+              <div class="label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">30</div>
+              <div class="label">Skills &amp; Competencies</div>
+            </div>
+            <div class="stat-item">
+              <div class="number">100%</div>
+              <div class="label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#f1f5f9; border-radius:32px; padding:40px 30px; border:1px solid #e2e8f0;">
+          <h3 style="font-size:1.3rem; color:#0f2b4b; margin-bottom:12px;"><i class="fas fa-quote-left" style="color:#2a4b7c; margin-right:10px;"></i>My approach</h3>
+          <p style="color:#334155; font-size:1.05rem; font-style:italic;">
+            “I’m not just about getting tasks done — I’m about making processes better, 
+            building trust, and being the reliable partner your team needs.”
+          </p>
+          <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
+            <span class="skill-tag"><i class="fas fa-check" style="color:#2a4b7c; margin-right:6px;"></i> Detail-oriented</span>
+            <span class="skill-tag"><i class="fas fa-check" style="color:#2a4b7c; margin-right:6px;"></i> Proactive</span>
+            <span class="skill-tag"><i class="fas fa-check" style="color:#2a4b7c; margin-right:6px;"></i> Tech-savvy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EXPERTISE / SERVICES ====== -->
+  <section class="section section-gray" id="expertise">
+    <div class="container">
+      <h2 class="section-title">What I Bring to the Table</h2>
+      <p class="section-sub">
+        A blend of finance operations, customer service, and sales expertise — 
+        tailored to support your business goals.
+      </p>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <h3>Accounts Payable</h3>
+          <p>Invoice processing, expense auditing, vendor coordination, and accurate payment reconciliation.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-headset"></i>
+          <h3>Customer Service</h3>
+          <p>Professional support via phone, email, and chat — resolving inquiries and building loyalty.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-handshake"></i>
+          <h3>Sales Support</h3>
+          <p>Identifying upsell opportunities, managing leads, and delivering persuasive sales presentations.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-chart-pie"></i>
+          <h3>Operations Management</h3>
+          <p>Streamlining workflows, coordinating teams, and implementing efficiency improvements.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-calculator"></i>
+          <h3>Financial Analysis</h3>
+          <p>Budget tracking, expense reporting, and data analysis using Excel and NetSuite.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Administrative Support</h3>
+          <p>Email management, scheduling, document preparation, and general office coordination.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SKILLS ====== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title">Core Skills</h2>
+      <p class="section-sub">Proven competencies across finance, customer service, and operations.</p>
+      <div class="skills-wrapper">
+        <div class="skill-group">
+          <h3><i class="fas fa-laptop"></i> Finance &amp; Operations</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Accounts Payable</span>
+            <span class="skill-tag">Expense Auditing</span>
+            <span class="skill-tag">NetSuite</span>
+            <span class="skill-tag">MS Excel (Advanced)</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Vendor Coordination</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3><i class="fas fa-users"></i> Service &amp; Sales</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Customer Service</span>
+            <span class="skill-tag">Sales Processes</span>
+            <span class="skill-tag">CRM Management</span>
+            <span class="skill-tag">Billing Inquiries</span>
+            <span class="skill-tag">Email Management</span>
+            <span class="skill-tag">Communication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EXPERIENCE ====== -->
+  <section class="section section-gray" id="experience">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-sub">A track record of delivering results across industries.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Business Operations Specialist</h3>
+          <div class="meta">
+            <span><i class="fas fa-calendar-alt"></i> 2020 – Present</span>
+            <span><i class="fas fa-building"></i> Private Company</span>
+          </div>
+          <p>
+            Managing accounts payable and expense auditing with high accuracy. 
+            Proficient in NetSuite and MS Excel to streamline financial processes. 
+            Coordinating with employees and vendors to ensure timely and accurate 
+            payments and resolve discrepancies.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Customer Support Specialist</h3>
+          <div class="meta">
+            <span><i class="fas fa-calendar-alt"></i> Feb 2018 – Feb 2020 · 2 yrs 1 mo</span>
+            <span><i class="fas fa-building"></i> Afni, Inc. · Full-time</span>
+          </div>
+          <p>
+            Handled customer billing inquiries while identifying opportunities to 
+            offer additional products and services. Excelled in customer service, 
+            sales processes, and conflict resolution — consistently meeting 
+            performance targets.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Customer Service &amp; Sales Representative</h3>
+          <div class="meta">
+            <span><i class="fas fa-calendar-alt"></i> Prior experience</span>
+          </div>
+          <p>
+            Built a foundation in customer relations and sales, honing communication 
+            and problem-solving skills that drive client satisfaction and revenue growth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EDUCATION ====== -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <p class="section-sub">Academic background that supports my professional expertise.</p>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3>Quezon City University</h3>
+          <div class="meta">Bachelor of Science in Industrial Engineering · 2005 – 2008</div>
+          <p>Focused on process optimization, systems analysis, and operational efficiency — 
+          a strong foundation for my work in operations and finance.</p>
+        </div>
+        <div class="edu-card">
+          <h3>STI College</h3>
+          <div class="meta">Associate in Information Technology · 2004 – 2005</div>
+          <p>Developed technical skills in IT fundamentals, which complement my proficiency 
+          with financial systems and data management tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section class="section section-gray" id="contact">
+    <div class="container">
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-sub">
+        Ready to streamline your operations, improve your accounts payable process, 
+        or elevate your customer service? Reach out — I'd love to connect.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in touch</h3>
+          <p>
+            I'm currently available for full-time roles and consulting opportunities. 
+            Let's discuss how I can contribute to your team's success.
+          </p>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:jeanete.buenaventura@example.com">jeanete.buenaventura@example.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+639123456789">+63 912 345 6789</a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/jeanete-buenaventura-3221a332b" target="_blank">linkedin.com/in/jeanete-buenaventura</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Quezon City, Philippines</span>
+          </div>
+          <div style="margin-top:30px; background:#eef2f6; padding:20px 24px; border-radius:20px;">
+            <p style="font-weight:500; color:#0f2b4b;">
+              <i class="fas fa-clock" style="color:#2a4b7c; margin-right:8px;"></i>
+              Open to full-time and project-based work
+            </p>
+            <p style="color:#475569; font-size:0.95rem; margin-top:4px;">
+              Available for immediate engagement
+            </p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Tell me about your project or role..." required></textarea>
+          <button type="submit" class="btn" style="width:100%;">
+            Send message <i class="fas fa-paper-plane" style="margin-left:10px;"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="container footer-flex">
+      <div>
+        <div class="logo" style="color:#ffffff; font-size:1.4rem;">J.<span style="color:#94a3b8;">B.</span></div>
+        <p style="margin-top:6px; font-size:0.9rem; color:#94a3b8;">
+          Operations · Accounts Payable · Customer Service
+        </p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/jeanete-buenaventura-3221a332b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:jeanete.buenaventura@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Jeanete Buenaventura. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== JAVASCRIPT ====== -->
+  <script>
+    // ---- Mobile hamburger toggle ----
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked (on mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // ---- Smooth scroll for anchor links ----
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ---- Contact form - simple alert (demo) ----
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for reaching out, Jeanete will get back to you soon!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
